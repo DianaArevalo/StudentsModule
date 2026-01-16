@@ -95,4 +95,51 @@ Contiene los **DTOs de request y response** que definen el contrato de la API y 
 ### Instalación de pnpm (si no está instalado)
 ```bash
 npm install -g pnpm
+```
 
+### Instalación de dependencias
+```bash
+pnpm install
+```
+
+### Ejecución en desarrollo
+```bash
+pnpm start:dev
+```
+
+---
+## 🔁 Flujo de datos
+El flujo del CRUD sigue el patrón de arquitectura hexagonal:
+
+HTTP Request
+ → Controller (Infrastructure)
+ → Request DTO
+ → Use Case (Application)
+ → Domain Service
+ → Entity
+ → Repository Interface (Port)
+ → Repository Implementation (Adapter)
+ → Response DTO
+ → HTTP Response
+
+ ---
+
+ ## 🌐 Endpoints disponibles
+
+ ➕ Crear estudiante
+POST /students
+
+📄 Listar estudiantes
+GET /students
+
+🔍 Obtener estudiante por id
+GET /students/:id
+
+✏️ Actualizar estudiante
+PUT /students/:id
+
+❌ Eliminar estudiante (lógico)
+DELETE /students/:id
+
+---
+ 
