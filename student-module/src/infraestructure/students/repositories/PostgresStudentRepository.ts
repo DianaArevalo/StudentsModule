@@ -100,10 +100,10 @@ export class PostgresStudentRepository implements StudentRepository {
     return rows.map(this.mapToStudent);
   }
 
-  async softDelete(id: StudentStatus): Promise<void> {
+  async softDelete(status: StudentStatus, id: string): Promise<void> {
     await this.client.query(
-      `UPDATE students SET status = false WHERE id = $1`,
-      [id],
+      `UPDATE students SET status = $1 WHERE id = $2`,
+      [status.toPrimitives(), id],
     );
   }
 

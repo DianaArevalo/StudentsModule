@@ -9,5 +9,5 @@ export interface StudentRepository {
     getAllStudent(): Promise<Student[]>;
     getStudentByEmail(email: StudentEmail): Promise<Student | null>;
     findByStatus(status: StudentStatus): Promise<Student[]>;
-    softDelete(status: StudentStatus): Promise<void>;
+    softDelete(status: StudentStatus, id: string): Promise<void>;
 }
