@@ -1,6 +1,7 @@
 import { StudentRepository } from "src/domain/students/repositories/student-repository";
 import { StudentDomainService } from "src/domain/students/service/student-service-student";
 import { StudentEmail } from "src/domain/students/value-objects/email.vo";
+import { StudentStatusPrimitiveT } from "src/domain/students/value-objects/student-status.vo";
 import { Student } from "src/entities/students/students";
 interface CreateStudentInput {
     id: string,
@@ -8,7 +9,7 @@ interface CreateStudentInput {
     lastName: string,
     email: string,
     birthDate: Date,
-    status: boolean,
+    status: StudentStatusPrimitiveT,
     createdAt: Date,
     updatedAt: Date,
 }
