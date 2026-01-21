@@ -19,7 +19,7 @@ export class CreateStudentUseCase {
     private readonly domainService: StudentDomainService,
   ) {}
 
-  async execute(props: CreateStudentInput){
+  async execute(props: CreateStudentInput): Promise<Student> {
     const emailVO = StudentEmail.create(props.email);
 
     // 1️⃣ regla de negocio
@@ -38,6 +38,6 @@ export class CreateStudentUseCase {
     );
 
     // 3️⃣ persistir
-    await this.repository.create(student);
+    return this.repository.create(student);
   }
 }

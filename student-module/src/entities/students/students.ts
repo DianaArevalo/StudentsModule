@@ -2,7 +2,7 @@ import { StudentEmail } from "src/domain/students/value-objects/email.vo";
 import { StudentStatus, StudentStatusPrimitiveT } from "src/domain/students/value-objects/student-status.vo";
 
 export class Student {
-  id?: string;
+  id: string;
   name: string;
   lastName: string;
   email: StudentEmail;
