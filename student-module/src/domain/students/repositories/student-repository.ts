@@ -4,10 +4,10 @@ import { StudentStatus } from "../value-objects/student-status.vo";
 
 export interface StudentRepository {
     create(student: Student): Promise<Student>;
-    edit(student: Student): Student;
-    getStudentById(id: String): Student;
-    getAllStudent(): Student[];
-    getStudentByEmail(email: StudentEmail): Student;
-    findByStatus(status: StudentStatus): Student[];
-    softdelete(status: StudentStatus): void;
+    edit(student: Student): Promise<Student>;
+    getStudentById(id: String): Promise<Student | null>;
+    getAllStudent(): Promise<Student[]>;
+    getStudentByEmail(email: StudentEmail): Promise<Student | null>;
+    findByStatus(status: StudentStatus): Promise<Student[]>;
+    softDelete(status: StudentStatus): Promise<void>;
 }

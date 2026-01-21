@@ -15,7 +15,7 @@ const StudentStatusTReverseMap: Record<
 };
 
 export class StudentStatus {
-  private constructor(private readonly value: StudentStatusT) {}
+  private constructor(readonly value: StudentStatusT) {}
 
   static active(): StudentStatus {
     return new StudentStatus('ACTIVE');
