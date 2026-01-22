@@ -1,3 +1,4 @@
+import { Injectable } from "@nestjs/common";
 import { StudentRepository } from "../../../domain/students/repositories/student-repository";
 import { StudentDomainService } from "../../../domain/students/service/student-service-student";
 import { StudentEmail } from "../../../domain/students/value-objects/email.vo";
@@ -14,6 +15,8 @@ interface CreateStudentInput {
     createdAt: Date,
     updatedAt: Date,
 }
+
+@Injectable()
 export class CreateStudentUseCase {
   constructor(
     private readonly repository: StudentRepository,

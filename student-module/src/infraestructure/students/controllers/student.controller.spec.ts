@@ -35,6 +35,6 @@ describe('StudentsController', () => {
 
     expect(result.success).toBe(true);
     expect(result.body).toBeDefined();
-    expect(result.body.email).toBe('ana@test.com');
+    expect(result.body.email.value).toBe('ana@test.com');
   });
 });
