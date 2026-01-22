@@ -104,7 +104,7 @@ pnpm install
 
 ### Ejecución en desarrollo
 ```bash
-pnpm start:dev
+pnpm start
 ```
 
 ---
@@ -113,12 +113,12 @@ El flujo del CRUD sigue el patrón de arquitectura hexagonal:
 
 HTTP Request
  → Controller (Infrastructure)
- → Request DTO
+ → Request DTO(class-validator + Swagger)
  → Use Case (Application)
  → Domain Service
- → Entity
+ → Entity + VO
  → Repository Interface (Port)
- → Repository Implementation (Adapter)
+ → Repository Implementation (Adapter: InMemory / DB)
  → Response DTO
  → HTTP Response
 
