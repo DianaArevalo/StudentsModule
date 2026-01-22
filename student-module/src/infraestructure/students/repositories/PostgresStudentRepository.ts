@@ -1,7 +1,7 @@
-import { StudentRepository } from "src/domain/students/repositories/student-repository";
-import { StudentEmail } from "src/domain/students/value-objects/email.vo";
-import { StudentStatus } from "src/domain/students/value-objects/student-status.vo";
-import { Student } from "src/entities/students/students";
+import { StudentRepository } from "../../../domain/students/repositories/student-repository";
+import { StudentEmail } from "../../../domain/students/value-objects/email.vo";
+import { StudentStatus } from "../../../domain/students/value-objects/student-status.vo";
+import { Student } from "../../../entities/students/students";
 
 export class PostgresStudentRepository implements StudentRepository {
   constructor(private readonly client: any) {}

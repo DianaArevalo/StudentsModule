@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { StudentRepository } from "src/domain/students/repositories/student-repository";
-import { CreateStudentUseCase } from 'src/application/students/usecases/studentCreateUseCase';
-import { StudentDomainService } from 'src/domain/students/service/student-service-student';
+
 import { StudentsController } from '../controllers/StudentController';
 import { StudentInMemoryRepository } from '../schemas/StudentInMemoryRepository';
+import { CreateStudentUseCase } from '../../../application/students/usecases/studentCreateUseCase';
+import { StudentDomainService } from '../../../domain/students/service/student-service-student';
+import { StudentRepository } from '../../../domain/students/repositories/student-repository';
 @Module({
   controllers: [StudentsController],
   providers: [

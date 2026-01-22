@@ -1,9 +1,11 @@
 import { Body, Controller, Post } from '@nestjs/common';
 import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
-import { CreateStudentUseCase } from 'src/application/students/usecases/studentCreateUseCase';
+
 import { ApiResponseDto } from './dtos/request/StudentResponseDTO';
 import { CreateStudentRequestDto } from '../DTOs/CreateStudentsRequest.dto';
-import { Student } from 'src/entities/students/students';
+import { Student } from '../../../entities/students/students';
+import { CreateStudentUseCase } from '../../../application/students/usecases/studentCreateUseCase';
+
 
 
 @ApiTags('Students')

@@ -1,4 +1,5 @@
-import { Student } from "src/entities/students/students";
+
+import { Student } from "../../../entities/students/students";
 import { StudentEmail } from "../value-objects/email.vo";
 import { StudentStatus } from "../value-objects/student-status.vo";
 

@@ -1,8 +1,9 @@
-import { StudentRepository } from "src/domain/students/repositories/student-repository";
-import { StudentDomainService } from "src/domain/students/service/student-service-student";
-import { StudentEmail } from "src/domain/students/value-objects/email.vo";
-import { StudentStatusPrimitiveT } from "src/domain/students/value-objects/student-status.vo";
-import { Student } from "src/entities/students/students";
+import { StudentRepository } from "../../../domain/students/repositories/student-repository";
+import { StudentDomainService } from "../../../domain/students/service/student-service-student";
+import { StudentEmail } from "../../../domain/students/value-objects/email.vo";
+import { StudentStatusPrimitiveT } from "../../../domain/students/value-objects/student-status.vo";
+import { Student } from "../../../entities/students/students";
+
 interface CreateStudentInput {
     id: string,
     name: string,

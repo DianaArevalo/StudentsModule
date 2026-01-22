@@ -1,8 +1,9 @@
-import { StudentRepository } from "src/domain/students/repositories/student-repository";
-import { StudentEmail } from "src/domain/students/value-objects/email.vo";
-import { StudentStatus } from "src/domain/students/value-objects/student-status.vo";
-import { Student } from "src/entities/students/students";
-import { NotFoundError } from "src/shared/domain/exceptions";
+import { StudentRepository } from "../../../domain/students/repositories/student-repository";
+import { StudentEmail } from "../../../domain/students/value-objects/email.vo";
+import { StudentStatus } from "../../../domain/students/value-objects/student-status.vo";
+import { Student } from "../../../entities/students/students";
+import { NotFoundError } from "../../../shared/domain/exceptions";
+
 
 export class StudentInMemoryRepository implements StudentRepository {
   private students: Student[] = [];
